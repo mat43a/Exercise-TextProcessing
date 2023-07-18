@@ -1,0 +1,12 @@
+import re
+
+usernames = input().split(", ")
+
+valid_usernames = []
+
+for username in usernames:
+    if re.match(r"^[a-zA-Z0-9_-]{3,16}$", username):
+        valid_usernames.append(username)
+
+for valid_username in valid_usernames:
+    print(valid_username)
